@@ -1,0 +1,115 @@
+/* light theme */
+:root {
+    --bg-color: #5eead4;
+    --light-text-color: #fff;
+    --black-text-color: #111827;
+    --container-color: #fff;
+    --overlay-color: rgba(0, 0, 0, 0.2);
+    --red-color: #ff5550;
+}
+/* dark theme */
+body.dark {
+    --bg-color: #0f172a;
+    --light-text-color: #fff;
+    --black-text-color: #fff;
+    --container-color: #1f2937;
+    --overlay-color: rgba(255, 255, 255, 0.2);
+    --red-color: #ff5550;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    transition: color .3s ease;
+}
+
+body {
+    background-color: var(--bg-color);
+    transition: background-color 0.3s linear;
+}
+
+.container {
+    width: 50%;
+    background-color: var(--container-color);
+    margin: 100px auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.2);
+}
+
+.container form {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.container form input {
+    background-color: var(--overlay-color);
+    padding: 8px 12px;
+    bottom: none;
+    outline: none;
+    width: 100%;
+    border-radius: 8px;
+    color: var(--black-text-color);
+    font-size: 18px;
+}
+
+.container form button {
+    pad: 8px 20px;
+    border-radius: 8px;
+    background-color: var(--bg-color);
+    font-size: 24px;
+    border: none;
+    outline: none;
+    color: var(--light-text-color);
+    cursor: pointer;
+}
+
+.list {
+    display: flex;
+    gap: 10px;
+    margin-top: 2rem;
+}
+
+.list li {
+    padding: 15px 25px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--light-text-color);
+    border-radius: 6px;
+}
+
+.list li button {
+    padding: 8px 10px;
+    background-color: var(--red-color);
+    color: var(--light-text-color);
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+
+.changer-mode {
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: var(--overlay-text-color);
+    border: none;
+    outline: none;
+    font-size: 32px;
+    cursor: pointer;
+    position: fixed;
+    top: 50px;
+    right: 70px;
+    overflow: hidden;
+}
